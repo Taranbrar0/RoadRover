@@ -1,0 +1,260 @@
+ /* <uniquifier>: Use a unique and descriptive class name */
+ /* <weight>: Use a value from 100 to 900 */
+/* 
+.libre-franklin-<uniquifier> {
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+*{
+  margin: 0;
+  padding: 0;
+ }
+ :root{
+  --navBackColor: #1f5466;
+  --textColor:white;
+ }
+nav{
+    background-color: var(--navBackColor);
+    box-shadow: 1px 5px 15px grey;
+    font-family: "Playfair Display", serif;
+    padding: .25em;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+nav ul a{
+    text-decoration: none;
+    color: var(--textColor);
+    font-weight: bold;
+    padding: 0.5rem;
+    opacity: 0.7;
+    transition: opacity .2s linear;
+}
+nav ul li a:hover{
+  opacity: 1.25;
+}
+nav li{
+    padding: 0.5rem;
+}
+.rightNav{
+  display: flex;
+  flex-direction: column;
+  display: none;
+  transition: display .5s linear,flex-direction .5s linear;
+}
+.leftNav{
+  display: flex;
+  justify-content: space-between;
+}
+.specialBtn{
+  color: var(--textColor);
+  background-color: rgba(121, 13, 223, 0.943);
+  opacity: 1;
+  transform: scale(2);
+  transition: transform .2s linear;
+}
+.specialBtn:hover{
+  transform: scale(2);
+}
+.wrapper{
+  font-family: "Libre Franklin", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+.trendItems{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.trendItems h3{
+  color: skyblue;
+  font-weight: 800;
+  font-size: xx-large;
+  position:absolute;
+  top: 1em;
+}
+.btnContainer{
+  padding: 1 rem;
+  margin-top: 1rem;
+}
+.btnContainer button{
+  margin: 0rem 2rem;
+  padding: 10px 20px;
+  border-radius: .5rem;
+  color: var(--textColor);
+  background-color: darkslateblue;
+  border: none;
+  transition: transform .2s linear,font-weight .2s linear;
+}
+.btnContainer button:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.trendItems img{
+  width: 100vw;
+  height: 200px;
+  transition: height .3s linear;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: contents;
+}
+.menuBtn{
+  color:var(--textColor);
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: opacity .2s linear;
+  margin-right: 1rem;
+}
+.menuBtn:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+.Cars{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+.car{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 20px;
+  border: 5px solid gray;
+  padding: 0.7rem;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.car img{
+  width: 300px;
+  height: auto;
+}
+.container{
+  text-align: center;
+}
+
+.showScroll{
+  animation: showAnimation  both;
+  animation-timeline: view();
+}
+.footer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+}
+.footer img,footer{
+  width: 30px;
+}
+
+.footer button{
+  background-color: gray;
+  color: white ;
+  font-weight: bold;
+  padding: 0.25rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+.container h2{
+  margin: 2rem;
+}
+@keyframes showAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(600px) scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.car-container {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+}
+#carLogo{
+ 
+  position: absolute;
+  bottom: -2rem;
+  right: 10px;
+  width: 200px;
+  height: 50px;
+}
+#carLogo img{
+  width: 100%;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* desktop screen */
+@media  screen and (min-width: 750px) {
+  nav ul{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 5px 0px;
+  }
+  nav{
+    padding: 0rem;
+  }
+  .leftNav{
+    display: flex;
+    padding-left: 1.25rem;
+  }
+  .rightNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+  .menuBtn{
+    display: none;
+  }
+  .car{
+    max-width:33% ;
+  }
+  .Cars{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .trendItems img{
+    height: 450px;
+  }
+}

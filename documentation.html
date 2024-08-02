@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Rover Car Dealership Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        ul {
+            list-style: disc;
+            margin: 10px 0 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Road Rover Car Dealership Documentation</h1>
+        <p>This documentation is about the car dealership Road Rover in which a person can see all the cars in stock. One button is for new cars, in which users can filter the car they want, and a similar one is for used cars. There is also a page for selling their car, where there is a form to enter details about the car, and you can also enter the image of the car.</p>
+
+        <h2>Features</h2>
+        
+        <h2>Styling</h2>
+        <p>There are two different CSS files for the homepage and for the used and new car pages. It covers navigation styles, layout configurations, button styles, form styling, car element styling, and media queries for responsive design.</p>
+        
+        <h2>jQuery</h2>
+        <p>Smooth transitions and movements for elements with the .used and #car IDs. Animates elements with the class .used by moving them to the left by 0 pixels over 1000 milliseconds (1 second) with a linear easing function.</p>
+        <p>Click events to toggle navigation display and scroll to the top. When the #car element is clicked, the page scrolls to the top slowly, and the #car element moves 1480 pixels upwards over 1000 milliseconds (1 second), then hides the #car element and resets its position to 100 pixels from the bottom. When the window is scrolled more than 400 pixels from the top, the #car element is moved to 100 pixels from the bottom and displayed.</p>
+        
+        <h2>SQL Database</h2>
+        <p>For filtering the data of cars, firstly we made a database in SQL using phpMyAdmin where we created a SQL table and inserted all the information of cars and the images. Then we used the filter form to filter data which is accessible by the user to see the appropriate results. For selling your car, we have added all the data entered by the user in our used car database and it is directly shown on the used car page after the user is done entering data in the form, which is validated. If the user makes a mistake, an error is shown on the page and asks the user to enter the wrong data again.</p>
+        
+        <h2>Security Measures</h2>
+        <p>Prepared statements and bind values are used to prevent malicious activity.</p>
+        
+        <h2>Copyright Free Images</h2>
+        <ul>
+            <li><a href="https://www.flaticon.com/free-icon/sedan_2736918?term=car&page=1&position=1&origin=search&related_id=2736918">Button car icon</a></li>
+            <li><a href="https://images.pexels.com/photos/18437102/pexels-photo-18437102.jpeg">Top page image</a></li>
+            <li><a href="https://www.pexels.com/photo/sports-honda-civic-type-r-parked-in-front-of-an-industrial-building-16475137/">Icon for scrolling - Photo by Jakub Pabis from Pexels</a></li>
+            <li><a href="https://www.pexels.com/photo/red-sedan-parked-on-pavement-6128309/">Photo by Алексей Игнатов from Pexels</a></li>
+            <li><a href="https://www.pexels.com/photo/orange-ford-bronco-on-road-in-mountains-in-colorado-usa-18205407/">Photo by Jacob Moore from Pexels</a></li>
+            <li><a href="https://www.pexels.com/photo/photo-of-black-audi-parked-on-roadside-1719648/">Photo by Ryan West from Pexels</a></li>
+            <li><a href="https://unsplash.com/photos/a-white-car-parked-next-to-a-body-of-water-ld3jq4dsj8w">Photo from Unsplash</a></li>
+            <li><a href="https://www.pexels.com/photo/gray-mercedez-benz-coupe-193021/">Photo by Mike Bird from Pexels</a></li>
+            <li><a href="https://www.pexels.com/photo/white-toyota-gt86-25955747/">Photo by Erik Mclean from Pexels</a></li>
+            <li><a href="https://www.pexels.com/photo/dodge-challengers-in-front-of-the-entrance-to-the-car-dealership-18437102/">Photo by 𝓢𝓱𝓪𝓷𝓮 𝓦𝓮𝓼𝓽 ™ from Pexels</a></li>
+            <li><a href="https://unsplash.com/photos/blue-car-parked-beside-brown-building-bvxHI7rTKbo">Photo from Unsplash</a></li>
+            <li><a href="https://www.flaticon.com/free-icon/speedometer_53128?term=speed&page=1&position=2&origin=search&related_id=53128">Speed icon</a></li>
+            <li><a href="https://www.flaticon.com/free-icon/car_12689302?term=car&page=1&position=19&origin=search&related_id=12689302">Car icon</a></li>
+            <li><a href="https://www.flaticon.com/free-icon/label_353760?term=price&page=1&position=10&origin=search&related_id=353760">Price icon</a></li>
+            <li><a href="https://unsplash.com/photos/black-jeep-wrangler-yDekvyZ52dU">Photo from Unsplash</a></li>
+            <li><a href="https://unsplash.com/photos/blue-coupe-beside-gray-house-p7tai9P7H-s">Photo from Unsplash</a></li>
+        </ul>
+    </div>
+</body>
+</html>

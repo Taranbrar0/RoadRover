@@ -1,0 +1,123 @@
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95vw;
+    grid-gap: 20px;
+    margin:auto;
+    position: relative;
+}
+.Cars{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+}
+.car{
+    width: 85%;
+}
+.trendItems{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.trendItems h3{
+    position: relative;
+    margin: 20px;
+}
+.trendItems img{
+    width: 90%;
+    position: relative;
+    left: -1380px;
+}
+.form-container{
+    text-align: center;
+    height: max-content;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form{
+    display: grid;
+    grid-template-columns:1fr 1fr  1fr;
+    margin: 10px;
+    margin: auto;
+    text-align: left;
+    background-color: white;
+}
+.form-container , .content-container{
+    box-shadow: 0 0 10px gray;
+}
+form label{
+    font-weight:900;
+    margin: 5px;
+}
+form input, form select, form button{
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+form button{
+    grid-column: 2;
+    background-color: green;
+    color: white;
+}
+main {
+    text-align: center;
+}
+nav{
+    width: 100vw;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1280px) {
+    .Cars {
+        grid-template-columns: 300px 300px;
+        grid-gap: 2rem;
+    }
+    .main-container{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        grid-row: 1;
+    }
+    .car{
+        max-width: 100%;
+    }
+    .car img{
+        width: 95%;
+    }
+    .trendItems img{
+        width: 75%;
+        height: 450px;
+        margin: auto;
+    }
+}
+
+
+@media  screen and (min-width: 1280px) {
+    .main-container{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        grid-row: 1;
+    }
+    .Cars{
+        display: grid;
+        grid-template-columns: repeat(3,300px);
+        grid-column-gap: 3rem;
+    }
+    .car{
+        max-width: 98%;
+    }
+    .car img{
+        width: 98%;
+    }
+    .trendItems img{
+        width: 75%;
+        height: 450px;
+        margin: auto;
+    }
+}
